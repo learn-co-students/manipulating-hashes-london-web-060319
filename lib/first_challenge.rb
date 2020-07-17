@@ -15,6 +15,17 @@ def first_challenge
 
   #your code here
 
+   contacts.each do |name, data|
+      if name == "Freddy Mercury" #find the name at level 1
+      data.each do |key, value|
+         if key == :favorite_icecream_flavors #check the condition
+            #delete_if method acts like each
+            value.delete_if {|flavor| flavor = "strawberry" } 
+         end
+      end
+      end
+   end
+   contacts
 
   #remember to return your newly altered contacts hash!
   contacts
